@@ -1,21 +1,13 @@
 'use client';
 
-import { useActionState, useEffect, useRef } from 'react';
-import { useFormStatus } from 'react-dom';
+import { useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
-import { handleNewsletterSubscription } from '@/lib/actions';
+import { supabase } from '@/lib/supabaseClient.js';
 
-const initialState = {
-  success: false,
-  message: '',
-  errors: null,
-};
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
+function SubmitButton({ pending }) {
   return (
     <Button type="submit" disabled={pending} className="w-full sm:w-auto">
       {pending ? 'Abonare...' : 'Abonează-te'}
@@ -24,42 +16,61 @@ function SubmitButton() {
 }
 
 export function NewsletterForm() {
-  const [state, formAction] = useActionState(handleNewsletterSubscription, initialState);
   const { toast } = useToast();
-  const formRef = useRef();
+  const formRef = useRef(null);
+  const [pending, setPending] = useState(false);
 
-  useEffect(() => {
-    if (state.success) {
-      toast({
-        title: 'Succes!',
-        description: state.message,
-      });
-      formRef.current?.reset();
-    } else if (state.message) {
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setPending(true);
+
+    const formData = new FormData(formRef.current);
+    const name = formData.get('name');
+    const email = formData.get('email');
+
+    const { error } = await supabase.from('newsletter').insert([
+      {
+        name,
+        email,
+      },
+    ]);
+
+    if (error) {
       toast({
         title: 'Eroare',
-        description: state.message,
+        description:
+          error.code === '23505'
+            ? 'Acest email este deja abonat.'
+            : 'Nu s-a putut realiza abonarea.',
         variant: 'destructive',
       });
+    } else {
+      toast({
+        title: 'Succes!',
+        description: 'Te-ai abonat cu succes la newsletter.',
+      });
+      formRef.current.reset();
     }
-  }, [state, toast]);
+
+    setPending(false);
+  }
 
   return (
-    <form ref={formRef} action={formAction} className="space-y-4">
+    <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="space-y-2">
           <Label htmlFor="name">Nume</Label>
           <Input id="name" name="name" required />
-           {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name[0]}</p>}
         </div>
+
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
           <Input id="email" name="email" type="email" required />
-           {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}
         </div>
       </div>
+
       <div className="flex justify-center">
-        <SubmitButton />
+        <SubmitButton pending={pending} />
       </div>
     </form>
   );

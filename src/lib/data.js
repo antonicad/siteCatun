@@ -3,60 +3,50 @@ import { Youtube, Disc, Mic } from 'lucide-react'; // Assuming these are song pl
 
 export const songs = [
   {
-    title: 'Ecourile Vidului',
-    platform: 'Spotify',
-    url: '#',
-    icon: Disc,
+    title: 'Amurg - Lyrics Video',
+    platform: 'Youtube',
+    url: 'https://youtu.be/dt9_Pv6S7Ok',
+    icon: Youtube,
   },
-  {
-    title: 'Realitate Fracturată',
-    platform: 'Apple Music',
-    url: '#',
+    {
+    title: 'Amurg',
+    platform: 'Spotify',
+    url: 'https://open.spotify.com/track/3GWruzbtXnev769NHr4k90',
     icon: Mic,
   },
   {
-    title: 'Insomnie de Miezul Nopții - Videoclip Oficial',
-    platform: 'YouTube',
-    url: '#',
+    title: 'Lancia - Official Video',
+    platform: 'Youtube',
+    url: 'https://youtu.be/_WbcbacV2F8',
     icon: Youtube,
   },
-  {
-    title: 'Țipând în Abis',
+    {
+    title: 'Lancia',
     platform: 'Spotify',
-    url: '#',
-    icon: Disc,
+    url: 'https://open.spotify.com/track/5BT3yiztVNIfhi6H9twJUx',
+    icon: Mic,
   },
+  {
+    title: 'Nisipuri - Official Video',
+    platform: 'YouTube',
+    url: 'https://youtu.be/ee_AeH_nkwE',
+    icon: Youtube,
+  },
+    {
+    title: 'Nisipuri',
+    platform: 'Spotify',
+    url: 'https://open.spotify.com/track/0cRSrAVwCOcbTFaUioxccw',
+    icon: Mic,
+  }
 ];
 
 export const concerts = [
   {
-    date: '2024-10-26',
-    venue: 'The Underworld',
-    city: 'Londra, UK',
-    ticketUrl: '#',
-    status: 'La vânzare',
-  },
-  {
-    date: '2024-11-02',
-    venue: 'Le Bataclan',
-    city: 'Paris, FR',
-    ticketUrl: '#',
-    status: 'La vânzare',
-  },
-  {
-    date: '2024-11-09',
-    venue: 'SO36',
-    city: 'Berlin, DE',
-    ticketUrl: '#',
-    status: 'Sold Out',
-  },
-  {
-    date: '2024-11-15',
-    venue: 'Melkweg',
-    city: 'Amsterdam, NL',
-    ticketUrl: '#',
-    status: 'La vânzare',
-  },
+    date: '2024-03-08',
+    venue: 'Nu sunt concerte planificate în acest moment.',
+    location: 'Romania',
+    price: ' ',
+  }
 ];
 
 export const merchItems = [

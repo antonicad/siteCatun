@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Coffee } from 'lucide-react';
+import { Newspaper } from 'lucide-react';
 
 export default function Hero() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
@@ -21,7 +21,7 @@ export default function Hero() {
       )}
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex flex-col items-center gap-6 px-4">
-        <div className="relative w-80 h-28 md:w-96 md:h-36 lg:w-[480px] lg:h-48">
+        <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-48 lg:h-48">
             <Image 
                 src="/logo.png" 
                 alt="CÅTUN logo" 
@@ -31,12 +31,13 @@ export default function Hero() {
             />
         </div>
         <p className="max-w-2xl text-lg md:text-xl text-primary/90">
-          Forjând sunete din adâncurile abisului urban.
+          Bun venit pe site-ul oficial al trupei Cåtun - 
+          o trupă hard rock din Iași, România
         </p>
         <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-          <Link href="#" target="_blank" rel="noopener noreferrer">
-            <Coffee className="mr-2 h-5 w-5" />
-            Cumpără-ne o cafea
+          <Link href="/newsletter" rel="noopener noreferrer">
+            <Newspaper className="mr-2 h-5 w-5" />
+            Pregătim ceva nou! <br></br> Abonează-te la Newsletter
           </Link>
         </Button>
       </div>

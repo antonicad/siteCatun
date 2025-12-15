@@ -3,7 +3,7 @@
     {
       "id": "hero",
       "description": "A dark concert stage with purple and blue lights.",
-      "imageUrl": "https://images.unsplash.com/photo-1576514129883-2f1d47a65da6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwc3RhZ2V8ZW58MHx8fHwxNzY1NzQ0NDgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/cover.jpg",
       "imageHint": "concert stage"
     },
     {
@@ -27,7 +27,7 @@
     {
       "id": "band-photo",
       "description": "A photo of the band members.",
-      "imageUrl": "https://images.unsplash.com/photo-1750188179642-a60dd3e24369?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYW5kJTIwcGhvdG98ZW58MHx8fHwxNzY1ODE1MTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/band.jpeg",
       "imageHint": "band photo"
     }
   ]

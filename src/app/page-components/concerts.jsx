@@ -20,16 +20,9 @@ function ConcertRow({ concert }) {
         {format(new Date(concert.date), 'dd MMM, yyyy')}
       </TableCell>
       <TableCell>{concert.venue}</TableCell>
-      <TableCell className="hidden md:table-cell">{concert.city}</TableCell>
+      <TableCell className="hidden md:table-cell">{concert.location}</TableCell>
       <TableCell className="text-center">
-        <Badge variant={statusVariant} className="bg-accent text-accent-foreground">{concert.status}</Badge>
-      </TableCell>
-      <TableCell className="text-right">
-        {concert.status !== 'Sold Out' && (
-          <Button asChild variant="outline" size="sm">
-            <Link href={concert.ticketUrl}>Bilete</Link>
-          </Button>
-        )}
+        <Badge variant={statusVariant} className="bg-accent text-accent-foreground">{concert.price}</Badge>
       </TableCell>
     </TableRow>
   );
@@ -44,7 +37,7 @@ export default function Concerts() {
             Concerte Viitoare
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Vino să ne vezi live. Experimentează energia.
+            Vino să ne vezi live. Nu vei regreta!
           </p>
         </div>
         <div className="max-w-4xl mx-auto bg-card rounded-lg border border-border/60 shadow-xl overflow-hidden">
@@ -53,9 +46,8 @@ export default function Concerts() {
               <TableRow className="border-b-border/60">
                 <TableHead>Data</TableHead>
                 <TableHead>Locație</TableHead>
-                <TableHead className="hidden md:table-cell">Oraș</TableHead>
-                <TableHead className="text-center">Status</TableHead>
-                <TableHead className="text-right">Bilete</TableHead>
+                <TableHead className="hidden md:table-cell">Locație</TableHead>
+                <TableHead className="text-center">Suport Artist</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>

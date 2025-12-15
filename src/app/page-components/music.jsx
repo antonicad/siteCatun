@@ -33,7 +33,7 @@ export default function Music() {
               Ultimele Lansări
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Scufundă-te în cele mai recente creații sonore ale noastre. Disponibile pe toate platformele majore de streaming.
+              Poți asculta de pe telefon, laptop, televizor, chiar și de pe aragaz! Disponibile pe toate platformele majore de streaming.
             </p>
         </div>
         <Card className="max-w-3xl mx-auto bg-card border-border/60 shadow-xl">

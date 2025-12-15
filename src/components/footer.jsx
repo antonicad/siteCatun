@@ -3,10 +3,9 @@ import Link from 'next/link';
 import { Button } from './ui/button';
 
 const socialLinks = [
-  { name: 'Instagram', icon: Instagram, url: '#' },
-  { name: 'Twitter', icon: Twitter, url: '#' },
-  { name: 'Facebook', icon: Facebook, url: '#' },
-  { name: 'YouTube', icon: Youtube, url: '#' },
+  { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/catunband/' },
+  { name: 'Facebook', icon: Facebook, url: 'https://www.facebook.com/catunband' },
+  { name: 'YouTube', icon: Youtube, url: 'https://www.youtube.com/@catunband' },
 ];
 
 export default function Footer() {
