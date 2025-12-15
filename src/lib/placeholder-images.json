@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A dark concert stage with purple and blue lights.",
+      "imageUrl": "https://images.unsplash.com/photo-1576514129883-2f1d47a65da6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwc3RhZ2V8ZW58MHx8fHwxNzY1NzQ0NDgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "concert stage"
+    },
+    {
+      "id": "t-shirt",
+      "description": "A black t-shirt with a band logo.",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1561203490-1df736285fc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxiYW5kJTIwdC1zaGlydHxlbnwwfHx8fDE3NjU4MTUxNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "band t-shirt"
+    },
+    {
+      "id": "hoodie",
+      "description": "A black hoodie with a band logo.",
+      "imageUrl": "https://images.unsplash.com/photo-1751940659896-d4d494475d1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiYW5kJTIwaG9vZGllfGVufDB8fHx8MTc2NTgxNTE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "band hoodie"
+    },
+    {
+      "id": "cap",
+      "description": "A black cap with a band logo.",
+      "imageUrl": "https://images.unsplash.com/photo-1739301674132-8521915d153b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiYW5kJTIwY2FwfGVufDB8fHx8MTc2NTgxNTE1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "band cap"
+    },
+    {
+      "id": "band-photo",
+      "description": "A photo of the band members.",
+      "imageUrl": "https://images.unsplash.com/photo-1750188179642-a60dd3e24369?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYW5kJTIwcGhvdG98ZW58MHx8fHwxNzY1ODE1MTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "band photo"
+    }
+  ]
 }
