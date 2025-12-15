@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, Music, X, Home, Shirt, Mic, Calendar, Mail, Newspaper } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -55,8 +56,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
-        <Link href="/" className="text-2xl font-bold tracking-wider font-headline">
-          CÅTUN
+        <Link href="/" className="relative h-12 w-48">
+          <Image src="/logo.png" alt="CÅTUN logo" fill style={{ objectFit: 'contain' }} />
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
@@ -73,8 +74,8 @@ export default function Header() {
           <SheetContent side="right" className="w-[300px] bg-background">
             <div className="flex h-full flex-col">
               <div className="flex items-center justify-between border-b pb-4">
-                 <Link href="/" className="text-2xl font-bold tracking-wider font-headline">
-                    CÅTUN
+                 <Link href="/" className="relative h-12 w-48">
+                    <Image src="/logo.png" alt="CÅTUN logo" fill style={{ objectFit: 'contain' }} />
                  </Link>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon">

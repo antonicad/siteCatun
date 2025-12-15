@@ -21,9 +21,15 @@ export default function Hero() {
       )}
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex flex-col items-center gap-6 px-4">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-bold tracking-tighter text-shadow-lg animate-fade-in-down">
-          CÅTUN
-        </h1>
+        <div className="relative w-80 h-28 md:w-96 md:h-36 lg:w-[480px] lg:h-48">
+            <Image 
+                src="/logo.png" 
+                alt="CÅTUN logo" 
+                fill 
+                style={{objectFit: 'contain'}} 
+                className="animate-fade-in-down"
+            />
+        </div>
         <p className="max-w-2xl text-lg md:text-xl text-primary/90">
           Forjând sunete din adâncurile abisului urban.
         </p>
