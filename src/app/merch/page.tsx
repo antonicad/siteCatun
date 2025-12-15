@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function MerchPage() {
   return (
-    <div className="container py-16 sm:py-24">
+    <div className="container px-4 py-16 sm:py-24">
       <div className="mx-auto max-w-2xl text-center mb-12">
         <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary">
           Merchandise

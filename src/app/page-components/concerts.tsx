@@ -39,7 +39,7 @@ function ConcertRow({ concert }: { concert: Concert }) {
 export default function Concerts() {
   return (
     <section id="concerts" className="py-16 sm:py-24 bg-background">
-      <div className="container">
+      <div className="container px-4">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary">
             Concerte Viitoare

@@ -6,7 +6,7 @@ export default function About() {
 
   return (
     <section id="about" className="py-16 sm:py-24 bg-background">
-      <div className="container">
+      <div className="container px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
             <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary">
