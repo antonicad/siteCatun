@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border/40 bg-background">
       <div className="container flex flex-col items-center justify-between gap-4 py-8 sm:flex-row">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground sm:ml-4">
           &copy; {new Date().getFullYear()} CÅTUN. Toate drepturile rezervate.
         </p>
         <div className="flex items-center gap-2">
