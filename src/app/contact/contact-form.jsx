@@ -29,7 +29,7 @@ export function ContactForm() {
     const formData = new FormData(formRef.current);
     formData.append('access_key', WEB3FORMS_KEY);
     formData.append('subject', 'Mesaj nou din formularul de contact');
-    formData.append('from_name', 'Mesaj Site Cåtun');
+    formData.append('from_name', 'Mesaj Site Catun');
     formData.append('replyto', formData.get('email'));
 
     try {
