@@ -1,6 +1,6 @@
 'use client';
 
-import { useActionState, useEffect, useRef } from 'react';
+import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { handleContactForm } from '@/lib/actions';
+import { useEffect, useRef } from 'react';
 
 const initialState = {
   success: false,
@@ -19,7 +20,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" disabled={pending} className="w-full">
-      {pending ? 'Sending...' : 'Send Message'}
+      {pending ? 'Se trimite...' : 'Trimite Mesaj'}
     </Button>
   );
 }
@@ -32,13 +33,13 @@ export function ContactForm() {
   useEffect(() => {
     if (state.success) {
       toast({
-        title: 'Message Sent!',
+        title: 'Mesaj Trimis!',
         description: state.message,
       });
       formRef.current?.reset();
     } else if (state.message) {
       toast({
-        title: 'Error',
+        title: 'Eroare',
         description: state.message,
         variant: 'destructive',
       });
@@ -49,22 +50,22 @@ export function ContactForm() {
     <form ref={formRef} action={formAction} className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <Label htmlFor="name">Full Name</Label>
+          <Label htmlFor="name">Nume complet</Label>
           <Input id="name" name="name" autoComplete="name" required />
           {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name[0]}</p>}
         </div>
         <div className="space-y-2">
-          <Label htmlFor="email">Email Address</Label>
+          <Label htmlFor="email">Adresă de email</Label>
           <Input id="email" name="email" type="email" autoComplete="email" required />
           {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}
         </div>
       </div>
       <div className="space-y-2">
-        <Label htmlFor="phone">Phone Number (Optional)</Label>
+        <Label htmlFor="phone">Număr de telefon (Opțional)</Label>
         <Input id="phone" name="phone" type="tel" autoComplete="tel" />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="message">Message</Label>
+        <Label htmlFor="message">Mesaj</Label>
         <Textarea id="message" name="message" rows={5} required />
         {state.errors?.message && <p className="text-sm text-destructive">{state.errors.message[0]}</p>}
       </div>

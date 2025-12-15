@@ -8,10 +8,10 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const navLinks = [
-  { href: '/', label: 'Home', icon: Home, anchor: false },
-  { href: '/#about', label: 'About', icon: Mic, anchor: true },
-  { href: '/#music', label: 'Music', icon: Music, anchor: true },
-  { href: '/#concerts', label: 'Concerts', icon: Calendar, anchor: true },
+  { href: '/', label: 'Acasă', icon: Home, anchor: false },
+  { href: '/#about', label: 'Despre', icon: Mic, anchor: true },
+  { href: '/#music', label: 'Muzică', icon: Music, anchor: true },
+  { href: '/#concerts', label: 'Concerte', icon: Calendar, anchor: true },
   { href: '/merch', label: 'Merch', icon: Shirt, anchor: false },
   { href: '/contact', label: 'Contact', icon: Mail, anchor: false },
   { href: '/newsletter', label: 'Newsletter', icon: Newspaper, anchor: false },
@@ -67,7 +67,7 @@ export default function Header() {
           <SheetTrigger asChild className="md:hidden">
             <Button variant="ghost" size="icon">
               <Menu className="h-6 w-6" />
-              <span className="sr-only">Open menu</span>
+              <span className="sr-only">Deschide meniul</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] bg-background">
@@ -79,7 +79,7 @@ export default function Header() {
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon">
                     <X className="h-6 w-6" />
-                    <span className="sr-only">Close menu</span>
+                    <span className="sr-only">Închide meniul</span>
                   </Button>
                 </SheetTrigger>
               </div>

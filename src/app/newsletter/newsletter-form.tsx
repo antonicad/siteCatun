@@ -19,7 +19,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" disabled={pending} className="w-full sm:w-auto">
-      {pending ? 'Subscribing...' : 'Subscribe'}
+      {pending ? 'Abonare...' : 'Abonează-te'}
     </Button>
   );
 }
@@ -32,13 +32,13 @@ export function NewsletterForm() {
   useEffect(() => {
     if (state.success) {
       toast({
-        title: 'Success!',
+        title: 'Succes!',
         description: state.message,
       });
       formRef.current?.reset();
     } else if (state.message) {
       toast({
-        title: 'Error',
+        title: 'Eroare',
         description: state.message,
         variant: 'destructive',
       });
@@ -49,7 +49,7 @@ export function NewsletterForm() {
     <form ref={formRef} action={formAction} className="space-y-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="space-y-2">
-          <Label htmlFor="name">Name</Label>
+          <Label htmlFor="name">Nume</Label>
           <Input id="name" name="name" required />
            {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name[0]}</p>}
         </div>

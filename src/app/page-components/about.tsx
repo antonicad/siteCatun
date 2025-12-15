@@ -10,13 +10,13 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
             <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary">
-              About CÅTUN
+              Despre CÅTUN
             </h2>
             <p className="text-lg text-muted-foreground">
-              Born from the industrial heart of the city, CÅTUN is a four-piece metal band that channels the raw energy and chaos of modern life into a sonic onslaught. Our music is a journey through fractured soundscapes, combining guttural vocals, complex polyrhythms, and atmospheric electronics.
+              Născută din inima industrială a orașului, CÅTUN este o trupă de metal formată din patru membri care canalizează energia brută și haosul vieții moderne într-un asalt sonor. Muzica noastră este o călătorie prin peisaje sonore fracturate, combinând voci guturale, poliritmuri complexe și elemente electronice atmosferice.
             </p>
             <p className="text-muted-foreground">
-              Since our formation in 2018, we've been dedicated to pushing the boundaries of our sound, drawing inspiration from industrial, progressive, and post-metal genres. We are more than a band; we are a collective experience, an auditory rebellion against the mundane.
+              De la formarea noastră în 2018, ne-am dedicat depășirii limitelor sunetului nostru, inspirându-ne din genurile industrial, progresiv și post-metal. Suntem mai mult decât o trupă; suntem o experiență colectivă, o rebeliune auditivă împotriva banalului.
             </p>
           </div>
           <div className="rounded-lg overflow-hidden shadow-2xl">

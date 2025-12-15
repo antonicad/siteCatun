@@ -10,18 +10,18 @@ const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
 
 // --- SCHEMAS ---
 const newsletterSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  email: z.string().email({ message: 'Please enter a valid email address.' }),
+  name: z.string().min(2, { message: 'Numele trebuie să aibă cel puțin 2 caractere.' }),
+  email: z.string().email({ message: 'Vă rugăm să introduceți o adresă de email validă.' }),
 });
 
 const contactSchema = newsletterSchema.extend({
   phone: z.string().optional(),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
+  message: z.string().min(10, { message: 'Mesajul trebuie să aibă cel puțin 10 caractere.' }),
 });
 
 const merchOrderSchema = newsletterSchema.extend({
-  address: z.string().min(10, { message: 'Address must be at least 10 characters.' }),
-  phone: z.string().min(5, { message: 'Please enter a valid phone number.' }),
+  address: z.string().min(10, { message: 'Adresa trebuie să aibă cel puțin 10 caractere.' }),
+  phone: z.string().min(5, { message: 'Vă rugăm să introduceți un număr de telefon valid.' }),
   merchItem: z.string(),
   subscribeToNewsletter: z.boolean().optional(),
 });
@@ -31,7 +31,7 @@ async function sendToWeb3Forms(data: Record<string, unknown>, subject: string) {
   if (WEB3FORMS_ACCESS_KEY === 'YOUR_WEB3FORMS_ACCESS_KEY') {
     console.warn("Web3Forms access key is not set. Please update src/lib/actions.ts.");
     // Simulate a successful submission for development purposes
-    return { success: true, message: "Form submitted successfully (simulated)." };
+    return { success: true, message: "Formular trimis cu succes (simulat)." };
   }
 
   const formData = new FormData();
@@ -51,7 +51,7 @@ async function sendToWeb3Forms(data: Record<string, unknown>, subject: string) {
     return result;
   } catch (error) {
     console.error('Error submitting to Web3Forms:', error);
-    return { success: false, message: 'An error occurred while submitting the form.' };
+    return { success: false, message: 'A apărut o eroare la trimiterea formularului.' };
   }
 }
 
@@ -74,7 +74,7 @@ export async function handleNewsletterSubscription(
   if (!validatedFields.success) {
     return {
       success: false,
-      message: 'Invalid form data.',
+      message: 'Date invalide în formular.',
       errors: validatedFields.error.flatten().fieldErrors,
     };
   }
@@ -84,7 +84,7 @@ export async function handleNewsletterSubscription(
   try {
      if (Object.values(db.app.options).some(value => typeof value === 'string' && value.startsWith("YOUR_"))) {
       console.warn("Firebase not configured, skipping database write.");
-      return { success: true, message: `Thank you for subscribing, ${name}! (Simulated)` };
+      return { success: true, message: `Vă mulțumim pentru abonare, ${name}! (Simulat)` };
     }
     
     // Check if email already exists
@@ -93,7 +93,7 @@ export async function handleNewsletterSubscription(
     const querySnapshot = await getDocs(q);
 
     if (!querySnapshot.empty) {
-      return { success: false, message: 'This email is already subscribed.' };
+      return { success: false, message: 'Acest email este deja abonat.' };
     }
 
     await addDoc(subscribersRef, {
@@ -102,10 +102,10 @@ export async function handleNewsletterSubscription(
       subscribedAt: new Date(),
     });
 
-    return { success: true, message: `Thank you for subscribing, ${name}!` };
+    return { success: true, message: `Vă mulțumim pentru abonare, ${name}!` };
   } catch (error) {
     console.error('Firebase Error:', error);
-    return { success: false, message: 'An error occurred. Please try again.' };
+    return { success: false, message: 'A apărut o eroare. Vă rugăm să încercați din nou.' };
   }
 }
 
@@ -125,17 +125,17 @@ export async function handleContactForm(prevState: any, formData: FormData) {
   if (!validatedFields.success) {
     return {
       success: false,
-      message: 'Invalid form data.',
+      message: 'Date invalide în formular.',
       errors: validatedFields.error.flatten().fieldErrors,
     };
   }
   
-  const result = await sendToWeb3Forms(validatedFields.data, `New Contact Message from ${validatedFields.data.name}`);
+  const result = await sendToWeb3Forms(validatedFields.data, `Mesaj nou de contact de la ${validatedFields.data.name}`);
 
   if (result.success) {
-    return { success: true, message: "Thank you for your message! We'll get back to you soon." };
+    return { success: true, message: "Vă mulțumim pentru mesaj! Vă vom contacta în curând." };
   } else {
-    return { success: false, message: result.message || 'An error occurred.' };
+    return { success: false, message: result.message || 'A apărut o eroare.' };
   }
 }
 
@@ -157,17 +157,17 @@ export async function handleMerchOrder(prevState: any, formData: FormData) {
     if (!validatedFields.success) {
         return {
             success: false,
-            message: 'Invalid form data.',
+            message: 'Date invalide în formular.',
             errors: validatedFields.error.flatten().fieldErrors,
         };
     }
 
     const { subscribeToNewsletter, ...orderData } = validatedFields.data;
 
-    const web3FormsResult = await sendToWeb3Forms(orderData, `New Merch Order: ${orderData.merchItem}`);
+    const web3FormsResult = await sendToWeb3Forms(orderData, `Comandă nouă de merchandise: ${orderData.merchItem}`);
 
     if (!web3FormsResult.success) {
-        return { success: false, message: web3FormsResult.message || 'Could not place order. Please try again.' };
+        return { success: false, message: web3FormsResult.message || 'Nu s-a putut plasa comanda. Vă rugăm să încercați din nou.' };
     }
 
     if (subscribeToNewsletter) {
@@ -177,5 +177,5 @@ export async function handleMerchOrder(prevState: any, formData: FormData) {
         await handleNewsletterSubscription({}, newsletterFormData);
     }
     
-    return { success: true, message: 'Your order has been received! We will contact you shortly to finalize payment and shipping.' };
+    return { success: true, message: 'Comanda dvs. a fost primită! Vă vom contacta în scurt timp pentru a finaliza plata și expedierea.' };
 }

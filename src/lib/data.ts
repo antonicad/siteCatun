@@ -4,25 +4,25 @@ import { Youtube, Disc, Mic } from 'lucide-react'; // Assuming these are song pl
 
 export const songs: Song[] = [
   {
-    title: 'Echoes of the Void',
+    title: 'Ecourile Vidului',
     platform: 'Spotify',
     url: '#',
     icon: Disc,
   },
   {
-    title: 'Fractured Reality',
+    title: 'Realitate Fracturată',
     platform: 'Apple Music',
     url: '#',
     icon: Mic,
   },
   {
-    title: 'Midnight Insomnia - Official Video',
+    title: 'Insomnie de Miezul Nopții - Videoclip Oficial',
     platform: 'YouTube',
     url: '#',
     icon: Youtube,
   },
   {
-    title: 'Screaming into the Abyss',
+    title: 'Țipând în Abis',
     platform: 'Spotify',
     url: '#',
     icon: Disc,
@@ -33,16 +33,16 @@ export const concerts: Concert[] = [
   {
     date: '2024-10-26',
     venue: 'The Underworld',
-    city: 'London, UK',
+    city: 'Londra, UK',
     ticketUrl: '#',
-    status: 'On Sale',
+    status: 'La vânzare',
   },
   {
     date: '2024-11-02',
     venue: 'Le Bataclan',
     city: 'Paris, FR',
     ticketUrl: '#',
-    status: 'On Sale',
+    status: 'La vânzare',
   },
   {
     date: '2024-11-09',
@@ -56,26 +56,26 @@ export const concerts: Concert[] = [
     venue: 'Melkweg',
     city: 'Amsterdam, NL',
     ticketUrl: '#',
-    status: 'On Sale',
+    status: 'La vânzare',
   },
 ];
 
 export const merchItems: MerchItem[] = [
   {
     id: 't-shirt',
-    name: 'CÅTUN Logo T-Shirt',
+    name: 'Tricou cu logo CÅTUN',
     price: '€25',
     image: PlaceHolderImages.find((img) => img.id === 't-shirt')!,
   },
   {
     id: 'hoodie',
-    name: 'CÅTUN Logo Hoodie',
+    name: 'Hanorac cu logo CÅTUN',
     price: '€50',
     image: PlaceHolderImages.find((img) => img.id === 'hoodie')!,
   },
   {
     id: 'cap',
-    name: 'CÅTUN Logo Cap',
+    name: 'Șapcă cu logo CÅTUN',
     price: '€20',
     image: PlaceHolderImages.find((img) => img.id === 'cap')!,
   },

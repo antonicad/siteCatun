@@ -18,7 +18,7 @@ function SongItem({ song }: { song: Song }) {
       <Button variant="ghost" size="icon" asChild>
         <Link href={song.url} target="_blank" rel="noopener noreferrer">
           <ArrowRight className="h-5 w-5" />
-          <span className="sr-only">Listen</span>
+          <span className="sr-only">Ascultă</span>
         </Link>
       </Button>
     </div>
@@ -31,15 +31,15 @@ export default function Music() {
       <div className="container">
         <div className="mx-auto max-w-2xl text-center mb-12">
             <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary">
-              Latest Releases
+              Ultimele Lansări
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Immerse yourself in our latest sonic creations. Available on all major streaming platforms.
+              Scufundă-te în cele mai recente creații sonore ale noastre. Disponibile pe toate platformele majore de streaming.
             </p>
         </div>
         <Card className="max-w-3xl mx-auto bg-card border-border/60 shadow-xl">
           <CardHeader>
-            <CardTitle className="text-2xl font-headline tracking-wide">Stream Our Music</CardTitle>
+            <CardTitle className="text-2xl font-headline tracking-wide">Ascultă Muzica Noastră</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-6">

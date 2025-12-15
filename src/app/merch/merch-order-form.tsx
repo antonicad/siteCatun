@@ -22,7 +22,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" disabled={pending} className="w-full">
-      {pending ? 'Placing Order...' : 'Submit Order'}
+      {pending ? 'Se plasează comanda...' : 'Trimite comanda'}
     </Button>
   );
 }
@@ -35,13 +35,13 @@ export function MerchOrderForm({ item }: { item: MerchItem }) {
   useEffect(() => {
     if (state.success) {
       toast({
-        title: 'Order Received!',
+        title: 'Comanda primită!',
         description: state.message,
       });
       formRef.current?.reset();
     } else if (state.message) {
       toast({
-        title: 'Error',
+        title: 'Eroare',
         description: state.message,
         variant: 'destructive',
       });
@@ -52,29 +52,29 @@ export function MerchOrderForm({ item }: { item: MerchItem }) {
     <form ref={formRef} action={formAction} className="space-y-4">
       <input type="hidden" name="merchItem" value={item.name} />
       <div className="space-y-2">
-        <Label htmlFor="name">Full Name</Label>
+        <Label htmlFor="name">Nume complet</Label>
         <Input id="name" name="name" required />
         {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name[0]}</p>}
       </div>
       <div className="space-y-2">
-        <Label htmlFor="email">Email Address</Label>
+        <Label htmlFor="email">Adresă de email</Label>
         <Input id="email" name="email" type="email" required />
         {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}
       </div>
       <div className="space-y-2">
-        <Label htmlFor="phone">Phone Number</Label>
+        <Label htmlFor="phone">Număr de telefon</Label>
         <Input id="phone" name="phone" type="tel" required />
         {state.errors?.phone && <p className="text-sm text-destructive">{state.errors.phone[0]}</p>}
       </div>
       <div className="space-y-2">
-        <Label htmlFor="address">Shipping Address</Label>
+        <Label htmlFor="address">Adresa de livrare</Label>
         <Textarea id="address" name="address" required />
         {state.errors?.address && <p className="text-sm text-destructive">{state.errors.address[0]}</p>}
       </div>
       <div className="flex items-center space-x-2">
         <Checkbox id="subscribeToNewsletter" name="subscribeToNewsletter" />
         <Label htmlFor="subscribeToNewsletter" className="text-sm font-normal">
-          Add me to the newsletter
+          Adaugă-mă la newsletter
         </Label>
       </div>
       <SubmitButton />

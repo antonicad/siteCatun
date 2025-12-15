@@ -14,11 +14,11 @@ import type { Concert } from '@/lib/types';
 import Link from 'next/link';
 
 function ConcertRow({ concert }: { concert: Concert }) {
-    const statusVariant = concert.status === 'Sold Out' ? 'destructive' : concert.status === 'On Sale' ? 'default' : 'secondary';
+    const statusVariant = concert.status === 'Sold Out' ? 'destructive' : concert.status === 'La vânzare' ? 'default' : 'secondary';
   return (
     <TableRow className="hover:bg-muted/10">
       <TableCell className="font-medium text-primary">
-        {format(new Date(concert.date), 'MMM dd, yyyy')}
+        {format(new Date(concert.date), 'dd MMM, yyyy')}
       </TableCell>
       <TableCell>{concert.venue}</TableCell>
       <TableCell className="hidden md:table-cell">{concert.city}</TableCell>
@@ -28,7 +28,7 @@ function ConcertRow({ concert }: { concert: Concert }) {
       <TableCell className="text-right">
         {concert.status !== 'Sold Out' && (
           <Button asChild variant="outline" size="sm">
-            <Link href={concert.ticketUrl}>Tickets</Link>
+            <Link href={concert.ticketUrl}>Bilete</Link>
           </Button>
         )}
       </TableCell>
@@ -42,21 +42,21 @@ export default function Concerts() {
       <div className="container">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary">
-            Upcoming Shows
+            Concerte Viitoare
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Catch us live. Experience the energy.
+            Vino să ne vezi live. Experimentează energia.
           </p>
         </div>
         <div className="max-w-4xl mx-auto bg-card rounded-lg border border-border/60 shadow-xl overflow-hidden">
           <Table>
             <TableHeader>
               <TableRow className="border-b-border/60">
-                <TableHead>Date</TableHead>
-                <TableHead>Venue</TableHead>
-                <TableHead className="hidden md:table-cell">City</TableHead>
+                <TableHead>Data</TableHead>
+                <TableHead>Locație</TableHead>
+                <TableHead className="hidden md:table-cell">Oraș</TableHead>
                 <TableHead className="text-center">Status</TableHead>
-                <TableHead className="text-right">Tickets</TableHead>
+                <TableHead className="text-right">Bilete</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>

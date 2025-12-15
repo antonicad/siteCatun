@@ -3,7 +3,7 @@ import { merchItems } from '@/lib/data';
 
 export const metadata = {
   title: 'Merch | CÅTUN Official',
-  description: 'Official merchandise from CÅTUN.',
+  description: 'Produse oficiale de la CÅTUN.',
 };
 
 export default function MerchPage() {
@@ -14,7 +14,7 @@ export default function MerchPage() {
           Merchandise
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          Get your official CÅTUN gear. Available at concerts or via mail order.
+          Ia-ți echipamentul oficial CÅTUN. Disponibil la concerte sau prin poștă.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

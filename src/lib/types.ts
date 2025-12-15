@@ -12,7 +12,7 @@ export type Concert = {
   venue: string;
   city: string;
   ticketUrl: string;
-  status: 'On Sale' | 'Sold Out' | 'Upcoming';
+  status: 'La vânzare' | 'Sold Out' | 'Urmează';
 };
 
 export type MerchItem = {

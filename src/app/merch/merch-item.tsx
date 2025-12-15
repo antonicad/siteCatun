@@ -36,13 +36,13 @@ export default function MerchItem({ item }: { item: MerchItemType }) {
       <CardFooter>
         <Dialog>
           <DialogTrigger asChild>
-            <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Order Now</Button>
+            <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Comandă acum</Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px] bg-background">
             <DialogHeader>
-              <DialogTitle className="font-headline text-2xl">Order: {item.name}</DialogTitle>
+              <DialogTitle className="font-headline text-2xl">Comandă: {item.name}</DialogTitle>
               <DialogDescription>
-                Fill out the form below. We'll contact you for payment and shipping details.
+                Completați formularul de mai jos. Vă vom contacta pentru detalii de plată și livrare.
               </DialogDescription>
             </DialogHeader>
             <MerchOrderForm item={item} />

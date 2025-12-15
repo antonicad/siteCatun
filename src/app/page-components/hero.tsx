@@ -25,12 +25,12 @@ export default function Hero() {
           CÅTUN
         </h1>
         <p className="max-w-2xl text-lg md:text-xl text-primary/90">
-          Forging sounds from the depths of the urban abyss.
+          Forjând sunete din adâncurile abisului urban.
         </p>
         <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
           <Link href="#" target="_blank" rel="noopener noreferrer">
             <Coffee className="mr-2 h-5 w-5" />
-            Buy Us A Coffee
+            Cumpără-ne o cafea
           </Link>
         </Button>
       </div>
