@@ -1,6 +1,7 @@
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import NewsletterButton from "@/components/newsletterbutton";
 import './globals.css';
 
 export const metadata = {
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
         <main className="flex-grow">{children}</main>
         <Footer />
         <Toaster />
+        <NewsletterButton />
       </body>
     </html>
   );

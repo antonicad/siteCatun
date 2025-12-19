@@ -5,7 +5,7 @@ export const songs = [
   {
     title: 'Amurg - Lyrics Video',
     platform: 'Youtube',
-    url: 'https://youtu.be/dt9_Pv6S7Ok',
+    url: 'https://www.youtube.com/watch?v=dt9_Pv6S7Ok',
     icon: Youtube,
   },
     {
