@@ -3,41 +3,29 @@ import { Youtube, Disc, Mic } from 'lucide-react'; // Assuming these are song pl
 
 export const songs = [
   {
-    title: 'Amurg - Lyrics Video',
+    title: 'Poduri - Lansare 9 Ianuarie 2026',
+    platform: 'Youtube',
+    url: 'https://www.youtube.com/watch?v=u2lyqo2vTOA',
+    icon: Youtube,
+  },
+  {
+    title: 'Amurg',
     platform: 'Youtube',
     url: 'https://www.youtube.com/watch?v=dt9_Pv6S7Ok',
     icon: Youtube,
   },
-    {
-    title: 'Amurg',
-    platform: 'Spotify',
-    url: 'https://open.spotify.com/track/3GWruzbtXnev769NHr4k90',
-    icon: Mic,
-  },
   {
-    title: 'Lancia - Official Video',
+    title: 'Lancia',
     platform: 'Youtube',
     url: 'https://youtu.be/_WbcbacV2F8',
     icon: Youtube,
   },
-    {
-    title: 'Lancia',
-    platform: 'Spotify',
-    url: 'https://open.spotify.com/track/5BT3yiztVNIfhi6H9twJUx',
-    icon: Mic,
-  },
   {
-    title: 'Nisipuri - Official Video',
+    title: 'Nisipuri',
     platform: 'YouTube',
     url: 'https://youtu.be/ee_AeH_nkwE',
     icon: Youtube,
   },
-    {
-    title: 'Nisipuri',
-    platform: 'Spotify',
-    url: 'https://open.spotify.com/track/0cRSrAVwCOcbTFaUioxccw',
-    icon: Mic,
-  }
 ];
 
 export const concerts = [

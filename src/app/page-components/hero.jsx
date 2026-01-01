@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Newspaper } from 'lucide-react';
+import { Music } from 'lucide-react';
 
 export default function Hero() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
@@ -35,9 +35,9 @@ export default function Hero() {
           o trupă hard rock din Iași, România
         </p>
         <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-          <Link href="/newsletter" rel="noopener noreferrer">
-            <Newspaper className="mr-2 h-5 w-5" />
-            Pregătim ceva nou! <br></br> Abonează-te la Newsletter
+          <Link href="https://www.youtube.com/watch?v=u2lyqo2vTOA" rel="noopener noreferrer">
+            <Music className="mr-2 h-5 w-5" />
+            Lansarea piesei "Poduri" - Youtube
           </Link>
         </Button>
       </div>
