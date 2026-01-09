@@ -32,7 +32,7 @@ export default function ContactPage() {
               </Link>
             </span>
             <br />
-            <span>E-mail: <a href="mailto:catun.band@gmail.com">catun.band@gmail.com</a></span>
+            <span>E-mail: <a href="mailto:contact@catunband.ro">contact@catunband.ro</a></span>
             <br />
             <span>Telefon: <a href="tel:+40755298699">0755 298 699</a></span>
           </p>

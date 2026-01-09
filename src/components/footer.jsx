@@ -1,4 +1,4 @@
-import { Instagram, Twitter, Facebook, Youtube } from 'lucide-react';
+import { Instagram, Facebook, Youtube, Music4, Disc, Clapperboard } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from './ui/button';
 
@@ -6,6 +6,9 @@ const socialLinks = [
   { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/catunband/' },
   { name: 'Facebook', icon: Facebook, url: 'https://www.facebook.com/catunband' },
   { name: 'YouTube', icon: Youtube, url: 'https://www.youtube.com/@catunband' },
+  { name: 'Apple Music', icon: Music4, url: 'https://music.apple.com/us/artist/c%C3%A5tun/1769647522' },
+  { name: 'Spotify', icon: Disc, url: 'https://open.spotify.com/artist/2yr6XQ0YzYjAibW2L7uD6A' },
+  { name: 'TikTok', icon: Clapperboard, url: 'https://www.tiktok.com/@catunband' },
 ];
 
 export default function Footer() {

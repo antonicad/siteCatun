@@ -14,6 +14,7 @@ import {
   Mail,
   Newspaper,
   BookOpen,
+  FileSpreadsheet,
 } from 'lucide-react';
 
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
@@ -24,10 +25,11 @@ const navLinks = [
   { href: '/#about', label: 'Despre', icon: Info },
   { href: '/#music', label: 'Muzică', icon: Music },
   { href: '/#concerts', label: 'Concerte', icon: Calendar },
-  { href: '/blog', label: 'Blog din Cåtun', icon: BookOpen },
+  { href: '/blog', label: 'Blog', icon: BookOpen },
   { href: '/merch', label: 'Merch', icon: Shirt },
   { href: '/contact', label: 'Contact', icon: Mail },
   { href: '/newsletter', label: 'Newsletter', icon: Newspaper },
+  { href: '/press-kit', label: 'Press', icon: FileSpreadsheet },
 ];
 
 export default function Header() {

@@ -3,7 +3,7 @@ import { Youtube, Disc, Mic } from 'lucide-react'; // Assuming these are song pl
 
 export const songs = [
   {
-    title: 'Poduri - Lansare 9 Ianuarie 2026',
+    title: 'Poduri',
     platform: 'Youtube',
     url: 'https://www.youtube.com/watch?v=u2lyqo2vTOA',
     icon: Youtube,
