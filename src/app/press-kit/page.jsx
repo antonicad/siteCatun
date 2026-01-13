@@ -32,7 +32,7 @@ export default function PressKitPage() {
         <p className="text-muted-foreground leading-relaxed">
           Cåtun este o trupă rock din România, activă din <b>8 martie 2024</b>, cu un sound construit pe influențe de <b>hard rock</b>, <b>metal</b>, <b>rock alternativ</b> și <b>pop rock</b>. Trupa abordează un stil direct, cu piese orientate atât spre impact live, cât și spre accesibilitate, îmbinând riff-uri puternice cu structuri clare și refrene memorabile.
 <br /><br />
-Proiectul a luat naștere în urma unei sesiuni de repetiții comune, iar decizia de a continua sub forma unei trupe a fost luată de <b>Ziua Mamei, în 2024</b>. Numele <b>Cåtun</b> provine de la o mică localitate din care toboșarul <b>Matei</b> îl lua pe bassistul <b>Denis</b> în drumul spre repetițiile din <b>Iași</b>, acest detaliu devenind parte din identitatea formației. Litera distinctivă <b>„å”</b> face parte din logo-ul trupei și reflectă stilul personal de scriere a literei "ă" al chitaristului <b>Rareș</b>.
+Proiectul a luat naștere în urma unei sesiuni de repetiții comune, iar decizia de a continua sub forma unei trupe a fost luată de <b>Ziua Mamei, în 2024</b>. Numele <b>Cåtun</b> provine de la o mică localitate din care toboșarul <b>Matei</b> îl lua pe bassistul <b>Denis</b> în drumul spre repetițiile din <b>Iași</b>, acest detaliu devenind parte din identitatea formației.
 <br /><br />
 În perioada 2024–2025, Cåtun a susținut <b>16 concerte</b>, dintre care <b>9 doar în anul 2025</b>, în orașe precum <b>Iași</b>, <b>Suceava</b>, <b>Botoșani</b>, <b>Piatra Neamț</b>, <b>Brașov</b>, <b>Bistrița</b>, dar și în afara României, la <b>Chișinău</b>. Trupa are un <b>repertoriu live de aproximativ o oră</b>, construit pentru evenimente de club, festivaluri și concerte tematice.
 <br /><br />
@@ -64,7 +64,7 @@ Anumite piese din repertoriu, precum <b>„Lancia”</b> și <b>„Nisipuri”</
           <p><strong>Data lansării:</strong> 9 ianuarie 2026</p>
           <p>
             {/* COMPLETEAZĂ */}
-            "Poduri" este o piesă sentimentală care explorează teme de reflecție, vinovăție și pierdere. Versurile transmit lupta interioară a celui care își asumă greșelile, încearcă să reconstruiască relații și să depășească durerea trecutului. Cu o atmosferă melancolică și melodicitate atent construită, piesa evidențiază latura emoțională și introspectivă a trupei Cåtun.
+            "Poduri" este o piesă sentimentală care explorează teme de reflecție, vinovăție și pierdere. Versurile transmit lupta interioară a celui care își asumă greșelile, încearcă să reconstruiască relații și să depășească durerea trecutului.
           </p>
         </div>
 

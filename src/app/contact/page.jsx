@@ -43,6 +43,10 @@ export default function ContactPage() {
         </div>
 
         <ContactForm />
+
+        <p className="mt-4 text-lg text-center underline">
+            <a href="/press-kit">View Press Kit</a>
+        </p>
       </div>
     </div>
   );
