@@ -32,7 +32,7 @@ export default function PressKitPage() {
         <p className="text-muted-foreground leading-relaxed">
           Cåtun este o trupă rock din România, activă din <b>8 martie 2024</b>, cu un sound construit pe influențe de <b>hard rock</b>, <b>metal</b>, <b>rock alternativ</b> și <b>pop rock</b>. Trupa abordează un stil direct, cu piese orientate atât spre impact live, cât și spre accesibilitate, îmbinând riff-uri puternice cu structuri clare și refrene memorabile.
 <br /><br />
-Proiectul a luat naștere în urma unei sesiuni de repetiții comune, iar decizia de a continua sub forma unei trupe a fost luată de <b>Ziua Mamei, în 2024</b>. Numele <b>Cåtun</b> provine de la o mică localitate din care toboșarul <b>Matei</b> îl lua pe bassistul <b>Denis</b> în drumul spre repetițiile din <b>Iași</b>, acest detaliu devenind parte din identitatea formației.
+Proiectul a luat naștere în urma unei sesiuni de repetiții comune, iar decizia de a continua sub forma unei trupe a fost luată de <b>Ziua Mamei, în 2024</b>, inițiativa vocalistului D'Jurj și al chitaristului Nyppy. Numele <b>Cåtun</b> provine de la o mică localitate din care toboșarul <b>Matei</b> îl lua pe bassistul <b>Denis</b> în drumul spre repetițiile din <b>Iași</b>, acest detaliu devenind parte din identitatea formației. Trupa este localizată în Iași, dar membrii provin din diverse orașe și localități. "Sediul" principal al trupei este în Boroaia, un sat din județul Suceava unde aceștia se reunesc frecvent pentru repetiții și creație.
 <br /><br />
 În perioada 2024–2025, Cåtun a susținut <b>16 concerte</b>, dintre care <b>9 doar în anul 2025</b>, în orașe precum <b>Iași</b>, <b>Suceava</b>, <b>Botoșani</b>, <b>Piatra Neamț</b>, <b>Brașov</b>, <b>Bistrița</b>, dar și în afara României, la <b>Chișinău</b>. Trupa are un <b>repertoriu live de aproximativ o oră</b>, construit pentru evenimente de club, festivaluri și concerte tematice.
 <br /><br />
@@ -47,11 +47,11 @@ Anumite piese din repertoriu, precum <b>„Lancia”</b> și <b>„Nisipuri”</
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Membrii trupei</h2>
         <ul className="grid sm:grid-cols-2 gap-4 text-muted-foreground">
-<li>— Sebastian Djurj (Voce)</li>
-<li>— Mircea Rusu (Chitară)</li>
-<li>— Rareș Bandol (Chitară)</li>
-<li>— Denis Antonică (Bass)</li>
-<li>— Matei Bolea (Tobe)</li>
+<li>— D'Jurj (Sebastian) - Voce</li>
+<li>— Mircea Rusu - Chitară</li>
+<li>— Nyppy (Rareș) - Chitară</li>
+<li>— Denis Antonică - Bass</li>
+<li>— Matei Bolea - Tobe</li>
 
         </ul>
       </section>
