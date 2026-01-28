@@ -13,27 +13,24 @@ export default function About() {
               Despre Cåtun
             </h2>
             <p className="text-lg text-muted-foreground">
-              Cåtun este o trupă de hard rock din Iași, fondată pe 8 martie 2024, ce aduce pe scenă energie pură, 
-              riff-uri puternice și o conexiune autentică cu publicul. 
-              Suntem mai mult decât o trupă – suntem o familie ce oferă experiențe live memorabile, 
-              lăsând întotdeauna fanii cu amintiri de neuitat.
+              Cåtun este o trupă rock din România, activă din 2024, cu un sound care îmbină hard rock, metal, rock alternativ și influențe pop rock. Trupa interpretează exclusiv material original, cu un repertoriu live de aproximativ o oră ce aduce pe scenă energie pură, riff-uri puternice și o conexiune autentică cu publicul. 
             </p>
             <p className="text-lg text-muted-foreground">
               Am avut ocazia să electrizăm scene locale, 
               și am dus muzica noastră în orașe precum Iași, Bistrița, Brașov și Chișinău. 
               Cu un repertoriu 100% original, garantăm un show memorabil, 
-              în care fiecare piesă spune o poveste și fiecare riff ridică publicul la un nou nivel de energie.
+              în care fiecare piesă spune o poveste și fiecare notă ridică publicul la un nou nivel de energie.
           </p>
 
           <p className="text-muted-foreground">
               Trupa este formată din:
           </p>
               <ul className="list-disc list-inside text-muted-foreground">
-                <li>Sebastian Djurj - Voce</li>
-                <li>Matei Bolea - Tobe</li>
-                <li>Denis Antonică - Bass</li>
-                <li>Rareș Bandol - Chitară</li>
-                <li>Mircea Rusu - Chitară</li>
+<li>— D'Jurj (Sebastian) - Voce</li>
+<li>— Mircea Rusu - Chitară</li>
+<li>— Nyppy (Rareș) - Chitară</li>
+<li>— Denis Antonică - Bass</li>
+<li>— Matei Bolea - Tobe</li>
               </ul>
 
           </div>
