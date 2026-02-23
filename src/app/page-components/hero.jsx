@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Music } from 'lucide-react';
+import { Film } from 'lucide-react';
 
 export default function Hero() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
@@ -36,8 +36,8 @@ export default function Hero() {
         </p>
         <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
           <Link href="https://forms.gle/eXBR5vd3fcFH36gg7" rel="noopener noreferrer">
-            <Music className="mr-2 h-5 w-5" />
-            Call for Volunteers - Clip 'Zori'
+            <Film className="mr-2 h-5 w-5" />
+            Call for Volunteers - Clip "Zori"
           </Link>
         </Button>
       </div>
