@@ -11,6 +11,26 @@ export const metadata = {
     icon: '/favicon.ico', // favicon standard
     shortcut: '/favicon.ico',
   },
+  keywords: [
+    'ce este catun',
+    'catun',
+    'cătun',
+    'cartoon',
+    'concerte catun'
+  ],
+  authors: [{ name: 'Trupa Cătun' }],
+  openGraph: {
+    title: 'Trupa Cåtun - Site Oficial',
+    description: 'Site-ul oficial al trupei Cåtun.',
+    url: 'https://catunband.ro',
+    siteName: 'Trupa Cåtun',
+    locale: 'ro_RO',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({ children }) {

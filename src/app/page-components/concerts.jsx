@@ -45,7 +45,7 @@ export default function Concerts() {
             <TableHeader>
               <TableRow className="border-b-border/60">
                 <TableHead>Data</TableHead>
-                <TableHead>Locație</TableHead>
+                <TableHead>Descriere</TableHead>
                 <TableHead className="hidden md:table-cell">Locație</TableHead>
                 <TableHead className="text-center">Suport Artist</TableHead>
               </TableRow>

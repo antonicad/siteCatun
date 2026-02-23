@@ -30,10 +30,10 @@ export const songs = [
 
 export const concerts = [
   {
-    date: '2024-03-08',
-    venue: 'Nu sunt concerte planificate în acest moment.',
-    location: 'Romania',
-    price: ' ',
+    date: '2026-03-21',
+    venue: 'Cåtun x Snoe Vane x Polystate',
+    location: "Rock'N'Rolla, Iași, România",
+    price: '50 RON',
   }
 ];
 

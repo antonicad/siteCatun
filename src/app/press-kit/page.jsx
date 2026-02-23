@@ -6,6 +6,15 @@ export const metadata = {
 export default function PressKitPage() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-16 space-y-20">
+
+      <div className="flex justify-end">
+        <a
+          href="/press-kit-en"
+          className="px-4 py-2 border rounded hover:bg-muted transition"
+        >
+          EN
+        </a>
+      </div>
       
       {/* HERO */}
       <div className="text-center space-y-4">

@@ -1,29 +1,23 @@
-import { NewsletterForm } from './newsletter-form';
+import MailerLiteEmbed from "./MailerLiteEmbed.jsx";
 
 export const metadata = {
-  title: 'Newsletter | Trupa Cåtun',
-  description: 'Abonează-te la newsletter-ul trupei Cåtun pentru noutăți, lansări noi și date de concerte.',
+  title: "Newsletter | Trupa Cåtun",
+  description:
+    "Abonează-te la newsletter-ul trupei Cåtun pentru noutăți, lansări noi și date de concerte.",
 };
 
 export default function NewsletterPage() {
   return (
-    <div className="container px-4 py-16 sm:py-24">
-      <div className="mx-auto max-w-2xl">
-        <div className="text-center mb-12">
-            <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary">
-              Newsletter
-            </h1>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Primește actualizări, anunțuri despre lansări și concerte. 
-              Promitem că nu deranjăm prea mult! 🤟🖤
-            </p>
-        </div>
-        <NewsletterForm />
-      </div>
+    <div className="container mx-auto py-16 px-4 text-center">
+      <h1 className="text-3xl font-bold mb-6">
+        Newsletter Trupa Cåtun
+      </h1>
 
-      <p className="mt-4 text-lg text-muted-foreground text-center mb-12">
-         Notă: Pregătim ceva nou și tu vei fi primul care află! 😉
+      <p className="mb-8 text-muted-foreground">
+        Primește actualizări, anunțuri despre lansări și concerte. Promitem că nu deranjăm prea mult! 🤟🖤
       </p>
+
+      <MailerLiteEmbed />
     </div>
   );
 }

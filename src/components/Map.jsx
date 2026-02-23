@@ -48,7 +48,7 @@ const events = [
   {
     city: "Piatra Neamț",
     coords: [46.9231, 26.3706],
-    entries: [{ date: "22/02/2025", place: "Centra Plaza Hotel" }],
+    entries: [{ date: "22/02/2025", place: "Central Plaza Hotel" }],
   },
   {
     city: "Botoșani",

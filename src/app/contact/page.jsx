@@ -44,8 +44,11 @@ export default function ContactPage() {
 
         <ContactForm />
 
-        <p className="mt-4 text-lg text-center underline">
-            <a href="/press-kit">View Press Kit</a>
+        <p className="mt-4 text-lg text-center">
+            <a href="/press-kit">Press Kit RO</a> • <a href="/press-kit-en">Press Kit EN</a>
+          </p>
+          <p className="mt-4 text-lg text-center text-muted-foreground">
+            Pentru booking, colaborări sau alte întrebări, nu ezitați să ne contactați!
         </p>
       </div>
     </div>
