@@ -37,7 +37,7 @@ export default function Hero() {
         <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
           <Link href="#concerts">
             <MicVocal className="mr-2 h-5 w-5" />
-            Vezi concertele planificate
+            Turneu Lansare "Drumuri și Umbre"
           </Link>
         </Button>
       </div>
