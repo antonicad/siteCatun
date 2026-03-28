@@ -31,9 +31,51 @@ export const songs = [
 export const concerts = [
   {
     date: '2026-03-21',
-    venue: 'Cåtun x Snoe Vane x Polystate',
-    location: "Rock'N'Rolla, Iași, România",
-    price: '50 RON',
+    location: "Iași, RO",
+  },
+  {
+    date: '2026-04-18',
+    location: "București, RO - Omen Bar (cu Phonic Bastard)",
+  },
+  {
+    date: '2026-04-19',
+    location: "Iași, RO",
+  },
+  {
+    date: '2026-05-09',
+    location: "Cluj, RO - Machines (cu Frontkill)",
+  },
+  {
+    date: '2026-05-16',
+    location: "Bistrița, RO - Soho Music Hall (cu Polystate)",
+  },
+  {
+    date: '2026-05-22',
+    location: "Gura Humorului, RO - Obciniada",
+  },
+  {
+    date: '2026-05-23',
+    location: "Botoșani, RO - Cross Medio Pub (cu Downside)",
+  },
+  {
+    date: '2026-05-30',
+    location: "Galați, RO - Uzina (cu Polystate)",
+  },
+  {
+    date: '2026-06-05',
+    location: "Brașov, RO - Tâmplărie (cu Polystate)",
+  },
+  {
+    date: '2026-06-06',
+    location: "Sibiu, RO - Rock N Bike (cu Polystate)",
+  },
+  {
+    date: '2026-06-13',
+    location: "Chișinău, MD - Labrewtory (cu Hypnotical & Encore)",
+  },
+  {
+    date: '2026-07-18',
+    location: "Iași, RO - Artă, Tată",
   }
 ];
 

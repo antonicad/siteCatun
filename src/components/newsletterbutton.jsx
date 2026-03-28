@@ -11,8 +11,8 @@ export default function NewsletterButton() {
         className="rounded-full px-6 shadow-lg bg-[#5C00B3] hover:bg-[#4a0091] text-white"
       >
         <Link href="/newsletter">
-          <Mail className="mr-2 h-5 w-5" />
-          Newsletter
+          <Mail className="mr-0 h-5 w-5" />
+          
         </Link>
       </Button>
     </div>

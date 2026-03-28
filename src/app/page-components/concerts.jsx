@@ -19,11 +19,7 @@ function ConcertRow({ concert }) {
       <TableCell className="font-medium text-primary">
         {format(new Date(concert.date), 'dd MMM, yyyy')}
       </TableCell>
-      <TableCell>{concert.venue}</TableCell>
-      <TableCell className="hidden md:table-cell">{concert.location}</TableCell>
-      <TableCell className="text-center">
-        <Badge variant={statusVariant} className="bg-accent text-accent-foreground">{concert.price}</Badge>
-      </TableCell>
+      <TableCell>{concert.location}</TableCell>
     </TableRow>
   );
 }
@@ -34,7 +30,7 @@ export default function Concerts() {
       <div className="container px-4">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary">
-            Concerte Viitoare
+            Concerte planificate
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Vino să ne vezi live. Nu vei regreta!
@@ -45,9 +41,7 @@ export default function Concerts() {
             <TableHeader>
               <TableRow className="border-b-border/60">
                 <TableHead>Data</TableHead>
-                <TableHead>Descriere</TableHead>
-                <TableHead className="hidden md:table-cell">Locație</TableHead>
-                <TableHead className="text-center">Suport Artist</TableHead>
+                <TableHead>Locație</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>

@@ -35,6 +35,7 @@ const events = [
       { date: "04/10/2024", place: "Rock’N’Iasi" },
       { date: "15/02/2025", place: "Rock'N'Rolla" },
       { date: "26/07/2025", place: "Rock'N'Rolla" },
+      { date: "21/03/2025", place: "Rock'N'Rolla" },
     ],
   },
   {

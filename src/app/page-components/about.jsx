@@ -17,7 +17,7 @@ export default function About() {
             </p>
             <p className="text-lg text-muted-foreground">
               Am avut ocazia să electrizăm scene locale, 
-              și am dus muzica noastră în orașe precum Iași, Bistrița, Brașov și Chișinău. 
+              și am dus muzica noastră în orașe din aproape toată țara, dar și peste graniță. 
               Cu un repertoriu 100% original, garantăm un show memorabil, 
               în care fiecare piesă spune o poveste și fiecare notă ridică publicul la un nou nivel de energie.
           </p>
@@ -26,11 +26,11 @@ export default function About() {
               Trupa este formată din:
           </p>
               <ul className="list-disc list-inside text-muted-foreground">
-<li>— D'Jurj (Sebastian) - Voce</li>
-<li>— Mircea Rusu - Chitară</li>
-<li>— Nyppy (Rareș) - Chitară</li>
-<li>— Denis Antonică - Bass</li>
-<li>— Matei Bolea - Tobe</li>
+<li>D'Jurj (Sebastian) - Voce</li>
+<li>Mircea Rusu - Chitară</li>
+<li>Nyppy (Rareș) - Chitară</li>
+<li>Denis Antonică - Bass</li>
+<li>Matei Bolea - Tobe</li>
               </ul>
 
           </div>
