@@ -34,7 +34,7 @@ export default function Concerts() {
             Concerte planificate în 2026
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Vino să ne vezi live. Nu vei regreta!
+            Mai jos regăsești turneul nostru pentru lansarea albumului "Drumuri și Umbre". <br></br>Vino să ne vezi live. Nu vei regreta!
           </p>
         </div>
         <div className="max-w-4xl mx-auto bg-card rounded-lg border border-border/60 shadow-xl overflow-hidden">
