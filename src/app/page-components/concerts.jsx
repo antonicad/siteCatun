@@ -20,6 +20,7 @@ function ConcertRow({ concert }) {
         {format(new Date(concert.date), 'dd MMM, yyyy')}
       </TableCell>
       <TableCell>{concert.location}</TableCell>
+      <TableCell>{concert.turneu}</TableCell>
     </TableRow>
   );
 }
@@ -30,7 +31,7 @@ export default function Concerts() {
       <div className="container px-4">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <h2 className="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary">
-            Concerte planificate
+            Concerte planificate în 2026
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Vino să ne vezi live. Nu vei regreta!
@@ -42,6 +43,7 @@ export default function Concerts() {
               <TableRow className="border-b-border/60">
                 <TableHead>Data</TableHead>
                 <TableHead>Locație</TableHead>
+                <TableHead>Detalii</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
