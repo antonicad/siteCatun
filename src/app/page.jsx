@@ -1,28 +1,10 @@
-'use client';
-
-import { useEffect } from 'react';
-
 import Hero from '@/app/page-components/hero';
 import About from '@/app/page-components/about';
 import Music from '@/app/page-components/music';
 import Concerts from '@/app/page-components/concerts';
-import dynamic from "next/dynamic";
-
-const Map = dynamic(() => import("@/components/Map"), {
-  ssr: false,
-});
+import MapWrapper from '@/components/MapWrapper';
 
 export default function Home() {
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (!hash) return;
-
-    const el = document.querySelector(hash);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, []);
-
   return (
     <>
       <Hero />
@@ -54,7 +36,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-center mb-8">
           Pe unde a ajuns muzica noastră?
         </h2>
-        <Map />
+        <MapWrapper />
       </div>
     </section>
 </div>

@@ -40,48 +40,25 @@ export default function Header() {
     setIsOpen(false);
   }, [pathname]);
 
-  // Navigare + scroll pentru ancore
-  const handleNavClick = (e, href) => {
-    if (!href.includes('#')) return;
-
-    e.preventDefault();
-    const [path, hash] = href.split('#');
-
-    const scrollToTarget = () => {
-      const el = document.getElementById(hash);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    };
-
-    if (pathname !== path) {
-      router.push(path);
-      setTimeout(scrollToTarget, 150);
-    } else {
-      scrollToTarget();
-    }
-  };
-
   const isActive = (href) => {
     if (href === '/') return pathname === '/';
     return pathname === href || pathname.startsWith(href);
   };
 
   const NavLink = ({ href, label, icon: Icon }) => (
-    <Link
-      href={href}
-      onClick={(e) => handleNavClick(e, href)}
-      className={`flex items-center gap-2 text-sm font-medium transition-colors
-        ${
-          isActive(href)
-            ? 'text-primary'
-            : 'text-primary/70 hover:text-primary'
-        }`}
-    >
-      <Icon className="h-4 w-4 md:hidden" />
-      <span>{label}</span>
-    </Link>
-  );
+  <Link
+    href={href}
+    className={`flex items-center gap-2 text-sm font-medium transition-colors
+      ${
+        isActive(href)
+          ? 'text-primary'
+          : 'text-primary/70 hover:text-primary'
+      }`}
+  >
+    <Icon className="h-4 w-4 md:hidden" />
+    <span>{label}</span>
+  </Link>
+);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur">
