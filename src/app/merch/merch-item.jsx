@@ -1,50 +1,71 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+
 import { MerchOrderForm } from './merch-order-form';
 
 export default function MerchItem({ item }) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Card className="bg-card border-border/60 shadow-xl flex flex-col overflow-hidden group">
+    <Card className="flex flex-col overflow-hidden group">
+      {/* IMAGE */}
       <div className="overflow-hidden">
         <Image
           src={item.image.imageUrl}
-          alt={item.image.description}
-          data-ai-hint={item.image.imageHint}
+          alt={item.name}
           width={600}
           height={600}
-          className="w-full h-auto object-cover aspect-square transition-transform duration-300 group-hover:scale-105"
+          className="w-full aspect-[3/4] object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
+
+      {/* TITLE */}
       <CardHeader>
-        <CardTitle className="text-xl font-headline tracking-wide">{item.name}</CardTitle>
+        <CardTitle className="text-lg font-headline tracking-wide">
+          {item.name}
+        </CardTitle>
       </CardHeader>
-      <CardContent className="flex-grow">
-        <p className="text-2xl font-bold text-accent">{item.price}</p>
+
+      {/* PRICE */}
+      <CardContent>
+        <p className="text-xl font-bold">{item.price}</p>
       </CardContent>
+
+      {/* BUTTON */}
       <CardFooter>
-        <Dialog>
+        <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Comandă acum</Button>
+            <Button className="w-full">
+              Comandă acum
+            </Button>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px] bg-background">
+
+          <DialogContent className="sm:max-w-[425px]">
             <DialogHeader>
-              <DialogTitle className="font-headline text-2xl">Comandă: {item.name}</DialogTitle>
-              <DialogDescription>
-                Completați formularul de mai jos. Vă vom contacta pentru detalii de plată și livrare.
-              </DialogDescription>
+              <DialogTitle>
+                Comandă: {item.name}
+              </DialogTitle>
             </DialogHeader>
-            <MerchOrderForm item={item} />
+
+            <MerchOrderForm item={item} setOpen={setOpen} />
           </DialogContent>
         </Dialog>
       </CardFooter>

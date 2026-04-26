@@ -36,6 +36,7 @@ const events = [
       { date: "15/02/2025", place: "Rock'N'Rolla" },
       { date: "26/07/2025", place: "Rock'N'Rolla" },
       { date: "21/03/2025", place: "Rock'N'Rolla" },
+      { date: "19/04/2025", place: "Rock'N'Rolla" },
     ],
   },
   {
@@ -74,6 +75,11 @@ const events = [
     coords: [45.6580, 25.6012],
     entries: [{ date: "15/11/2025", place: "Tâmplărie Pub" }],
   },
+  {
+    city: "București",
+    coords: [44.4268, 26.1025],
+    entries: [{ date: "18/04/2026", place: "Omen Pub" }],
+},
 ];
 
 export default function EventMap() {

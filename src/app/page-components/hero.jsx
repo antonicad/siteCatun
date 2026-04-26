@@ -35,9 +35,9 @@ export default function Hero() {
           o trupă hard rock din Iași, România
         </p>
         <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-          <Link href="#concerts">
+          <Link href="https://www.youtube.com/watch?v=p2uVRnq4b4g">
             <MicVocal className="mr-2 h-5 w-5" />
-            Turneu Lansare "Drumuri și Umbre"
+            Ascultă piesa "Zori"
           </Link>
         </Button>
       </div>

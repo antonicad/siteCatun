@@ -95,21 +95,39 @@ export const concerts = [
 
 export const merchItems = [
   {
-    id: 't-shirt',
-    name: 'Tricou cu logo CÅTUN',
-    price: '€25',
-    image: PlaceHolderImages.find((img) => img.id === 't-shirt'),
+    id: 'album-drumuri',
+    name: 'Album "Drumuri și Umbre" CD',
+    price: '50 lei',
+    image: PlaceHolderImages.find((img) => img.id === 'product'),
   },
   {
-    id: 'hoodie',
-    name: 'Hanorac cu logo CÅTUN',
-    price: '€50',
-    image: PlaceHolderImages.find((img) => img.id === 'hoodie'),
+    id: 'tricou-drumuri',
+    name: 'Tricou "Drumuri și Umbre" - ediție limitată',
+    price: '60 lei',
+    image: PlaceHolderImages.find((img) => img.id === 'product'),
   },
   {
-    id: 'cap',
-    name: 'Șapcă cu logo CÅTUN',
-    price: '€20',
-    image: PlaceHolderImages.find((img) => img.id === 'cap'),
+    id: 'tricou',
+    name: 'Tricou simplu Cåtun',
+    price: '60 lei',
+    image: PlaceHolderImages.find((img) => img.id === 'product'),
+  },
+  {
+    id: 'bat-tobe',
+    name: 'Băț de tobe Cåtun',
+    price: '15 lei',
+    image: PlaceHolderImages.find((img) => img.id === 'product'),
+  },
+  {
+    id: 'poster-trupa',
+    name: 'Poster Trupa Cåtun',
+    price: '30 lei',
+    image: PlaceHolderImages.find((img) => img.id === 'product'),
+  },
+  {
+    id: 'breloc',
+    name: 'Breloc Cåtun',
+    price: '20 lei',
+    image: PlaceHolderImages.find((img) => img.id === 'product'),
   },
 ];

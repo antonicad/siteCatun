@@ -1,81 +1,90 @@
 'use client';
 
-import { useActionState, useEffect, useRef } from 'react';
-import { useFormStatus } from 'react-dom';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
-import { handleMerchOrder } from '@/lib/actions';
-
-const initialState = {
-  success: false,
-  message: '',
-  errors: null,
-};
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" disabled={pending} className="w-full">
-      {pending ? 'Se plasează comanda...' : 'Trimite comanda'}
-    </Button>
-  );
-}
 
 export function MerchOrderForm({ item }) {
-  const [state, formAction] = useActionState(handleMerchOrder, initialState);
   const { toast } = useToast();
-  const formRef = useRef();
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (state.success) {
-      toast({
-        title: 'Comanda primită!',
-        description: state.message,
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const formData = new FormData(e.target);
+
+    formData.append('access_key', '7424b87e-ade2-4c93-8f9f-32bcb0e82fa0');
+    formData.append('subject', `Comandă merch - ${item.name}`);
+    formData.append('Produs', item.name);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
       });
-      formRef.current?.reset();
-    } else if (state.message) {
+
+      const data = await res.json();
+
+      if (data.success) {
+        toast({
+          title: 'Succes',
+          description:
+            'Comanda trimisă cu succes. Vei fi contactat în scurt timp în legătură cu aceasta.',
+        });
+
+        e.target.reset();
+      } else {
+        toast({
+          title: 'Eroare',
+          description: 'A apărut o problemă. Încearcă din nou.',
+          variant: 'destructive',
+        });
+      }
+    } catch (err) {
       toast({
         title: 'Eroare',
-        description: state.message,
+        description: 'Nu s-a putut trimite comanda.',
         variant: 'destructive',
       });
     }
-  }, [state, toast]);
+
+    setLoading(false);
+  };
 
   return (
-    <form ref={formRef} action={formAction} className="space-y-4">
-      <input type="hidden" name="merchItem" value={item.name} />
-      <div className="space-y-2">
-        <Label htmlFor="name">Nume complet</Label>
-        <Input id="name" name="name" required />
-        {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name[0]}</p>}
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div>
+        <Label>Nume</Label>
+        <Input name="name" required />
       </div>
-      <div className="space-y-2">
-        <Label htmlFor="email">Adresă de email</Label>
-        <Input id="email" name="email" type="email" required />
-        {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}
+
+      <div>
+        <Label>Email</Label>
+        <Input name="email" type="email" required />
       </div>
-      <div className="space-y-2">
-        <Label htmlFor="phone">Număr de telefon</Label>
-        <Input id="phone" name="phone" type="tel" required />
-        {state.errors?.phone && <p className="text-sm text-destructive">{state.errors.phone[0]}</p>}
+
+      <div>
+        <Label>Telefon</Label>
+        <Input name="phone" required />
       </div>
-      <div className="space-y-2">
-        <Label htmlFor="address">Adresa de livrare</Label>
-        <Textarea id="address" name="address" required />
-        {state.errors?.address && <p className="text-sm text-destructive">{state.errors.address[0]}</p>}
+
+      <div>
+        <Label>Adresă</Label>
+        <Textarea name="address" required />
       </div>
-      <div className="flex items-center space-x-2">
-        <Checkbox id="subscribeToNewsletter" name="subscribeToNewsletter" />
-        <Label htmlFor="subscribeToNewsletter" className="text-sm font-normal">
-          Adaugă-mă la newsletter
-        </Label>
+
+      <div>
+        <Label>Preferințe (mărime, alt merch, etc.)</Label>
+        <Textarea name="other_preferences" required />
       </div>
-      <SubmitButton />
+
+      <Button type="submit" className="w-full" disabled={loading}>
+        {loading ? 'Se trimite...' : 'Trimite comanda'}
+      </Button>
     </form>
   );
 }

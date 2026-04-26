@@ -18,16 +18,16 @@ export default function Footer() {
         <p className="text-sm text-muted-foreground sm:ml-4">
           &copy; {new Date().getFullYear()} CÅTUN. Toate drepturile rezervate.
         </p>
-        <div className="flex items-center gap-2">
-          {socialLinks.map((social) => (
-            <Button key={social.name} variant="ghost" size="icon" asChild>
-              <Link href={social.url} target="_blank" rel="noopener noreferrer">
-                <social.icon className="h-5 w-5" />
-                <span className="sr-only">{social.name}</span>
-              </Link>
-            </Button>
-          ))}
-        </div>
+          <div className="grid grid-cols-3 gap-2">
+            {socialLinks.map((social) => (
+              <Button key={social.name} variant="ghost" size="icon" asChild>
+                <Link href={social.url} target="_blank" rel="noopener noreferrer">
+                  <social.icon className="h-5 w-5" />
+                  <span className="sr-only">{social.name}</span>
+                </Link>
+              </Button>
+            ))}
+          </div>
       </div>
     </footer>
   );
