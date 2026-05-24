@@ -38,7 +38,7 @@ export default function PressKitEN() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Short Bio</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Cåtun is a Romanian rock band active since 2024, blending hard rock, metal, alternative rock, and pop rock influences. The band performs exclusively original material and has played concerts in cities such as Iași, Suceava, Brașov, Bistrița, and Chișinău. Their live set runs approximately one hour, and they are currently working on their debut album, scheduled for release in 2026.
+          Cåtun is a Romanian rock band active since 2024, blending hard rock, metal, alternative rock, and pop rock influences. The band performs exclusively original material and has played concerts in cities such as Bucharest, Cluj, Iași, Suceava, Brașov, Bistrița, and Chișinău.
         </p>
       </section>
 

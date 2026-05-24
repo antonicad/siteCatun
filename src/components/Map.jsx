@@ -35,8 +35,8 @@ const events = [
       { date: "04/10/2024", place: "Rock’N’Iasi" },
       { date: "15/02/2025", place: "Rock'N'Rolla" },
       { date: "26/07/2025", place: "Rock'N'Rolla" },
-      { date: "21/03/2025", place: "Rock'N'Rolla" },
-      { date: "19/04/2025", place: "Rock'N'Rolla" },
+      { date: "21/03/2026", place: "Rock'N'Rolla" },
+      { date: "19/04/2026", place: "Rock'N'Rolla" },
     ],
   },
   {
@@ -58,6 +58,7 @@ const events = [
     entries: [
       { date: "15/03/2025", place: "Cross Medio Pub" },
       { date: "18/10/2025", place: "Cross Medio Pub" },
+      { date: "23/05/2026", place: "Cross Medio Pub" },
     ],
   },
   {
@@ -68,7 +69,10 @@ const events = [
   {
     city: "Bistrița",
     coords: [47.1333, 24.5000],
-    entries: [{ date: "16/08/2025", place: "WTF Rock Contest" }],
+    entries: [
+      { date: "16/08/2025", place: "WTF Rock Contest" },
+      { date: "16/05/2026", place: "Soho Music Hall" },
+    ],
   },
   {
     city: "Brașov",
@@ -80,6 +84,16 @@ const events = [
     coords: [44.4268, 26.1025],
     entries: [{ date: "18/04/2026", place: "Omen Pub" }],
 },
+{
+  city: "Cluj-Napoca",
+  coords: [46.7712, 23.6236],
+  entries: [{ date: "09/05/2026", place: "Machines" }],
+},
+{
+  city: "Gura Humorului",
+  coords: [47.5510, 25.8960],
+  entries: [{ date: "22/05/2026", place: "Obciniada" }],
+}
 ];
 
 export default function EventMap() {

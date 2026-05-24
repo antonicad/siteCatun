@@ -25,7 +25,7 @@ const navLinks = [
   { href: '/#music', label: 'Muzică', icon: Music },
   { href: '/#concerts', label: 'Concerte', icon: Calendar },
   { href: '/blog', label: 'Blog', icon: BookOpen },
-  { href: '/merch', label: 'Merch', icon: Shirt },
+  /* { href: '/merch', label: 'Merch', icon: Shirt }, */
   { href: '/contact', label: 'Contact', icon: Mail },
   { href: '/newsletter', label: 'Newsletter', icon: Newspaper },
 ];

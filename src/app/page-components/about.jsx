@@ -13,7 +13,7 @@ export default function About() {
               Despre Cåtun
             </h2>
             <p className="text-lg text-muted-foreground">
-              Cåtun este o trupă rock din România, activă din 2024, cu un sound care îmbină hard rock, metal, rock alternativ și influențe pop rock. Trupa interpretează exclusiv material original, cu un repertoriu live de aproximativ o oră ce aduce pe scenă energie pură, riff-uri puternice și o conexiune autentică cu publicul. 
+              Cåtun este o trupă rock din Iași, România, activă din 2024, cu un sound care îmbină hard rock, metal, rock alternativ și influențe pop rock.
             </p>
             <p className="text-lg text-muted-foreground">
               Am avut ocazia să electrizăm scene locale, 
@@ -26,11 +26,11 @@ export default function About() {
               Trupa este formată din:
           </p>
               <ul className="list-disc list-inside text-muted-foreground">
-<li>D'Jurj (Sebastian) - Voce</li>
-<li>Mircea Rusu - Chitară</li>
-<li>Nyppy (Rareș) - Chitară</li>
-<li>Denis Antonică - Bass</li>
-<li>Matei Bolea - Tobe</li>
+                <li>D'Jurj (Sebastian) - Voce</li>
+                <li>Mircea Rusu - Chitară</li>
+                <li>Nyppy (Rareș) - Chitară</li>
+                <li>Denis Antonică - Bass</li>
+                <li>Matei Bolea - Tobe</li>
               </ul>
 
           </div>

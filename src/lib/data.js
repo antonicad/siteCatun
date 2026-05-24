@@ -3,6 +3,12 @@ import { Youtube, Disc, Mic } from 'lucide-react'; // Assuming these are song pl
 
 export const songs = [
   {
+    title: 'Zori',
+    platform: 'Youtube',
+    url: 'https://youtu.be/p2uVRnq4b4g',
+    icon: Youtube,
+  },
+  {
     title: 'Poduri',
     platform: 'Youtube',
     url: 'https://www.youtube.com/watch?v=u2lyqo2vTOA',

@@ -30,7 +30,7 @@ export default function PressKitPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Bio scurt</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Cåtun este o trupă rock din România, activă din 2024, cu un sound care îmbină hard rock, metal, rock alternativ și influențe pop rock. Trupa interpretează exclusiv material original și a susținut concerte în orașe precum Iași, Suceava, Brașov, Bistrița și Chișinău. Cåtun are un repertoriu live de aproximativ o oră și lucrează în prezent la albumul de debut, programat pentru 2026.
+          Cåtun este o trupă rock din România, activă din 2024, cu un sound care îmbină hard rock, metal, rock alternativ și influențe pop rock. Trupa interpretează exclusiv material original și a susținut concerte în orașe precum București, Cluj, Iași, Suceava, Brașov, Bistrița și Chișinău.
 
         </p>
       </section>
