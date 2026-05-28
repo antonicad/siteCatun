@@ -1,5 +1,4 @@
-import MerchItem from './merch-item';
-import { merchItems } from '@/lib/data';
+import { Link } from "lucide-react";
 
 export const metadata = {
   title: 'Merch | Trupa Cåtun',
@@ -13,29 +12,12 @@ export default function MerchPage() {
         <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary">
           Merch Trupa Cåtun
         </h1>
-        <p className="mt-4 text-lg text-muted-foreground">
-          Descoperă colecția oficială de merch Cåtun – tricouri, albume și accesorii create pentru fani. Comandă acum și fii parte din comunitate.
+        <p className="mt-4 text-lg text-white">
+          Din păcate, momentan produsele de merch nu sunt disponibile pe site. Însă, daca dorești să achiziționezi merch oficial, te rugăm să ne contactezi prin intermediul formularului de contact. Mulțumim pentru susținere! {"<3"}
         </p>
-        <p className="mt-4 text-lg text-muted-foreground">
-          Orice comanda iti aduce un mic bonus din partea noastra, asa ca nu ezita sa ne sustii si sa porti cu mandrie merch-ul nostru! 🙌
-        </p>
-      </div>
-
-      {merchItems.length === 0 ? (
-        <p className="text-center text-muted-foreground">
-          Produsele vor apărea în curând 👀
-        </p>
-      ) : (
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {merchItems.map((item) => (
-            <MerchItem key={item.id} item={item} />
-          ))}
-        </div>
-      )}
-      <div className="mx-auto max-w-2xl text-center mb-12">
-        <p className="mt-4 text-lg text-muted-foreground">
-          Fiecare solicitare este procesată manual, așa că te rugăm să ai răbdare. Vei fi contactat în scurt timp pentru detalii legate de plată și livrare. Mulțumim pentru susținere! 🙏
-        </p>
+        <a href="/contact">
+        <button className="mt-6 px-6 py-3 bg-primary text-black rounded-md hover:bg-primary-grey transition-colors">Contactează-ne</button>
+        </a>
       </div>
     </div>
   );

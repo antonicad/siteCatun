@@ -3,6 +3,8 @@ export const metadata = {
   description: 'Press kit oficial Cåtun Band – bio, muzică, poze și contact media.',
 };
 
+import MapWrapper from '@/components/MapWrapper';
+
 export default function PressKitPage() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-16 space-y-20">
@@ -85,27 +87,25 @@ Anumite piese din repertoriu, precum <b>„Lancia”</b> și <b>„Nisipuri”</
         </div>
       </section>
 
-<section className="space-y-4">
-  <h2 className="text-2xl font-semibold">Concerte & activitate live</h2>
-  <ul className="list-disc list-inside text-muted-foreground">
-    <li>03/08/2024 Roman - La Casa Veche</li>
-    <li>16/08/2024 Iași - La "Container"</li>
-    <li>21/09/2024 Iași - Concurs Rock’N’Iași</li>
-    <li>04/10/2024 Iași - Rock’N’Iași</li>
-    <li>02/11/2024 Suceava - Art Rock Cafe</li>
-    <li>15/02/2025 Iași - Rock'N'Rolla</li>
-    <li>22/02/2025 Piatra Neamț - Central Plaza Hotel</li>
-    <li>08/03/2025 Suceava - Art Rock Cafe</li>
-    <li>15/03/2025 Botoșani - Cross Medio Pub</li>
-    <li>26/04/2025 Chișinău - LaBrewTory</li>
-    <li>15/06/2025 Roman - Terra Peutique</li>
-    <li>26/07/2025 Iași - Rock'N'Rolla</li>
-    <li>15/08/2025 Roman - Alege Moto Rock</li>
-    <li>16/08/2025 Bistrița - WTF Rock Contest</li>
-    <li>18/10/2025 Botoșani - Cross Medio Pub</li>
-    <li>15/11/2025 Brașov - Tâmplărie Pub</li>
-  </ul>
-</section>
+<div className="relative z-0">
+       <section
+      className="
+        px-4
+        py-12
+        md:min-h-screen
+        md:flex
+        md:items-center
+        md:justify-center
+      "
+    >
+      <div className="w-full max-w-6xl">
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Concerte & activitate live
+        </h2>
+        <MapWrapper />
+      </div>
+    </section>
+</div>
 
 
       {/* MEDIA DOWNLOAD */}

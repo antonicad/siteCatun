@@ -1,4 +1,4 @@
-import { ContactForm } from './contact-form';
+import { ContactForm } from './contact-form.jsx';
 import Link from 'next/link';
 
 export const metadata = {
