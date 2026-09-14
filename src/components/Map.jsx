@@ -4,6 +4,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
+const apiKey = process.env.NEXT_PUBLIC_MAP_API_KEY;
+
 // Fix Leaflet icon pentru Next.js
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -37,6 +39,7 @@ const events = [
       { date: "26/07/2025", place: "Rock'N'Rolla" },
       { date: "21/03/2026", place: "Rock'N'Rolla" },
       { date: "19/04/2026", place: "Rock'N'Rolla" },
+      { date: "18/07/2026", place: "ArtaTată" },
     ],
   },
   {
@@ -64,7 +67,10 @@ const events = [
   {
     city: "Chișinău",
     coords: [47.0105, 28.8638],
-    entries: [{ date: "26/04/2025", place: "LaBrewTory" }],
+    entries: [
+      { date: "26/04/2025", place: "LaBrewTory" },
+      { date: "04/07/2026", place: "LaBrewTory" },
+    ],
   },
   {
     city: "Bistrița",
@@ -77,23 +83,41 @@ const events = [
   {
     city: "Brașov",
     coords: [45.6580, 25.6012],
-    entries: [{ date: "15/11/2025", place: "Tâmplărie Pub" }],
+    entries: [
+      { date: "15/11/2025", place: "Tâmplărie Pub" },
+      { date: "05/06/2026", place: "Tâmplărie Pub" },
+    ],
   },
   {
     city: "București",
     coords: [44.4268, 26.1025],
     entries: [{ date: "18/04/2026", place: "Omen Pub" }],
-},
-{
-  city: "Cluj-Napoca",
-  coords: [46.7712, 23.6236],
-  entries: [{ date: "09/05/2026", place: "Machines" }],
-},
-{
-  city: "Gura Humorului",
-  coords: [47.5510, 25.8960],
-  entries: [{ date: "22/05/2026", place: "Obciniada" }],
-}
+  },
+  {
+    city: "Cluj-Napoca",
+    coords: [46.7712, 23.6236],
+    entries: [{ date: "09/05/2026", place: "Machines" }],
+  },
+  {
+    city: "Gura Humorului",
+    coords: [47.5510, 25.8960],
+    entries: [{ date: "22/05/2026", place: "Obciniada" }],
+  },
+  {
+    city: "Galați",
+    coords: [45.4353, 28.0080],
+    entries: [{ date: "30/05/2026", place: "Uzina" }],
+  },
+  {
+    city: "Sibiu",
+    coords: [45.7983, 24.1256],
+    entries: [{ date: "06/06/2026", place: "Rock N Bike" }],
+  },
+  {
+    city: "Hălăucești",
+    coords: [47.0944, 26.8167],
+    entries: [{ date: "04/09/2026", place: "Young Vibes Festival" }],
+  },
 ];
 
 export default function EventMap() {
@@ -113,9 +137,9 @@ export default function EventMap() {
             shadow-xl
           "
         >
-          <TileLayer
-  attribution="&copy; Carto"
-  url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+<TileLayer
+  url={`https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png?key=${apiKey}`}
+  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
 />
 
           {events.map((city) => (
