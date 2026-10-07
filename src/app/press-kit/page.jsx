@@ -45,11 +45,9 @@ export default function PressKitPage() {
 <br /><br />
 Proiectul a luat naștere în urma unei sesiuni de repetiții comune, iar decizia de a continua sub forma unei trupe a fost luată de <b>Ziua Mamei, în 2024</b>, la inițiativa vocalistului D'Jurj și al chitaristului Nyppy. Numele <b>Cåtun</b> provine de la o mică localitate din care toboșarul <b>Matei</b> îl ridica pe bassistul <b>Denis</b> în drumul spre repetițiile din <b>Iași</b>, acest detaliu devenind parte din identitatea formației. Trupa este localizată în Iași, dar membrii provin din diverse orașe și localități. "Sediul" principal al trupei este în Boroaia, un sat din județul Suceava unde aceștia se reunesc frecvent pentru repetiții și creație.
 <br /><br />
-În perioada 2024–2025, Cåtun a susținut <b>16 concerte</b>, dintre care <b>9 doar în anul 2025</b>, în orașe precum <b>Iași</b>, <b>Suceava</b>, <b>Botoșani</b>, <b>Piatra Neamț</b>, <b>Brașov</b>, <b>Bistrița</b>, dar și în afara României, la <b>Chișinău</b>. Trupa are un <b>repertoriu live de aproximativ o oră</b>, construit pentru evenimente de club, festivaluri și concerte tematice.
-<br /><br />
 Anumite piese din repertoriu, precum <b>„Lancia”</b> și <b>„Nisipuri”</b>, sunt deja bine cunoscute publicului care frecventează concertele trupei și sunt considerate <i>piese reprezentative</i> pentru show-urile live. Din punct de vedere stilistic, repertoriul include piese energice precum <b>„Zori”</b>, materiale cu un caracter mai accesibil precum <b>„Lancia”</b>, dar și compoziții cu o abordare mai introspectivă, cum este <b>„Poduri”</b>, cea mai recentă lansare a trupei.
 <br /><br />
-<b>Întreg repertoriul Cåtun este original</b>. Trupa lucrează în prezent la <b>albumul de debut</b>, programat pentru lansare în <b>2026</b>, care va include atât piese deja prezentate live, cât și materiale noi. Activitatea trupei este orientată spre extinderea prezenței pe scena rock, apariții media și participări la evenimente și festivaluri din țară și din străinătate.
+<b>Întreg repertoriul Cåtun este original</b> și trupa a lansat albumul de debut <b>Drumuri și Umbre</b> în septembrie 2026. Activitatea trupei este orientată spre extinderea prezenței pe scena rock, apariții media și participări la evenimente și festivaluri din țară și din străinătate.
 
         </p>
       </section>
@@ -71,19 +69,15 @@ Anumite piese din repertoriu, precum <b>„Lancia”</b> și <b>„Nisipuri”</
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Ultima lansare</h2>
         <div className="space-y-2 text-muted-foreground">
-          <p><strong>Titlu piesă:</strong> Poduri</p>
-          <p><strong>Data lansării:</strong> 9 ianuarie 2026</p>
-          <p>
-            {/* COMPLETEAZĂ */}
-            "Poduri" este o piesă sentimentală care explorează teme de reflecție, vinovăție și pierdere. Versurile transmit lupta interioară a celui care își asumă greșelile, încearcă să reconstruiască relații și să depășească durerea trecutului.
-          </p>
+          <p><strong>Albumul</strong> Drumuri și Umbre</p>
+          <p><strong>Data lansării:</strong> 18 septembrie 2026</p>
         </div>
 
         {/* LINKURI LANSARE */}
         <div className="flex flex-wrap gap-4">
-          <a href="https://open.spotify.com/track/37th37UrfYBF1XEJIjFFy6" className="underline">Spotify</a>
-          <a href="https://www.youtube.com/watch?v=u2lyqo2vTOA" className="underline">YouTube</a>
-          <a href="https://music.apple.com/us/song/poduri/1867195497" className="underline">Apple Music</a>
+          <a href="https://open.spotify.com/album/3JUgKq61PO77zQWHTu4FX3?si=_mq0ELeITT6r1Q_XKewwSA" className="underline">Spotify</a>
+          <a href="https://www.youtube.com/watch?v=XMnEdT0Nhug&list=OLAK5uy_mwmSYYt5tPaVdIUrbTHKSJmnrf4lwRmRo" className="underline">YouTube</a>
+          <a href="https://music.apple.com/us/album/drumuri-%C8%99i-umbre/1883395923" className="underline">Apple Music</a>
         </div>
       </section>
 
